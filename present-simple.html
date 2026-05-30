@@ -41,18 +41,44 @@
 <li>every day</li>
 </ul>
 
-<h2>4. Bài tập</h2>
+<h2>4. Bài tập luyện tập</h2>
 
-<p>She _____ to school every day.</p>
+<form id="quiz">
 
-<ul>
-<li>A. go</li>
-<li>B. goes</li>
-<li>C. going</li>
-<li>D. gone</li>
-</ul>
+<p><b>Câu 1:</b> She _____ to school every day.</p>
 
-<p>Đáp án: B</p>
+<input type="radio" name="q1" value="A"> go<br>
+<input type="radio" name="q1" value="B"> goes<br>
+<input type="radio" name="q1" value="C"> going<br>
+<input type="radio" name="q1" value="D"> gone<br>
+
+<br>
+
+<p><b>Câu 2:</b> My father _____ TV every evening.</p>
+
+<input type="radio" name="q2" value="A"> watch<br>
+<input type="radio" name="q2" value="B"> watches<br>
+<input type="radio" name="q2" value="C"> watched<br>
+<input type="radio" name="q2" value="D"> watching<br>
+
+<br>
+
+<p><b>Câu 3:</b> They _____ football on Sundays.</p>
+
+<input type="radio" name="q3" value="A"> play<br>
+<input type="radio" name="q3" value="B"> plays<br>
+<input type="radio" name="q3" value="C"> played<br>
+<input type="radio" name="q3" value="D"> playing<br>
+
+<br>
+
+<button type="button" onclick="checkQuiz()">
+Kiểm Tra Kết Quả
+</button>
+
+</form>
+
+<h3 id="result"></h3>
 
 </body>
 </html>
