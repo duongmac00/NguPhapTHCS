@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>There Is / There Are</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+max-width:1000px;
+margin:auto;
+padding:20px;
+background:#f5f7fa;
+line-height:1.6;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+h1{
+color:#1976d2;
+}
+
+button{
+background:#1976d2;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.result{
+font-size:20px;
+font-weight:bold;
+margin-top:20px;
+color:green;
+}
+
+.home{
+display:inline-block;
+margin-bottom:20px;
+text-decoration:none;
+font-weight:bold;
+color:#1976d2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="lop6.html" class="home">
+← Quay về Lớp 6
+</a>
+
+<div class="card">
+
+<h1>THERE IS / THERE ARE</h1>
+
+<h2>1. Lý thuyết ngắn gọn</h2>
+
+<ul>
+<li>There is dùng với danh từ số ít.</li>
+<li>There are dùng với danh từ số nhiều.</li>
+<li>Dùng để diễn tả sự tồn tại của người hoặc vật.</li>
+</ul>
+
+<p>Ví dụ:</p>
+
+<ul>
+<li>There is a book on the table.</li>
+<li>There are three books on the table.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>2. Công thức</h2>
+
+<h3>Khẳng định</h3>
+
+<p>There is + danh từ số ít</p>
+
+<p>There are + danh từ số nhiều</p>
+
+<h3>Phủ định</h3>
+
+<p>There is not (isn't)</p>
+
+<p>There are not (aren't)</p>
+
+<h3>Nghi vấn</h3>
+
+<p>Is there + ... ?</p>
+
+<p>Are there + ... ?</p>
+
+</div>
+
+<div class="card">
+
+<h2>3. Dấu hiệu nhận biết</h2>
+
+<ul>
+<li>a book</li>
+<li>a pen</li>
+<li>a cat</li>
+<li>two books</li>
+<li>many students</li>
+<li>some chairs</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>4. Lưu ý quan trọng</h2>
+
+<p>
+❌ There is three books.
+<br>
+✅ There are three books.
+</p>
+
+<p>
+❌ There are a book.
+<br>
+✅ There is a book.
+</p>
+
+<p>
+Danh từ số ít → There is
+<br>
+Danh từ số nhiều → There are
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>5. Bài tập luyện tập</h2>
+
+<form id="quiz">
+
+<p>1. _____ a book on the table.</p>
+
+<input type="radio" name="q1" value="A"> There is<br> <input type="radio" name="q1" value="B"> There are<br>
+
+<hr>
+
+<p>2. _____ three students in the classroom.</p>
+
+<input type="radio" name="q2" value="A"> There is<br> <input type="radio" name="q2" value="B"> There are<br>
+
+<hr>
+
+<p>3. _____ a cat in the garden.</p>
+
+<input type="radio" name="q3" value="A"> There is<br> <input type="radio" name="q3" value="B"> There are<br>
+
+<hr>
+
+<p>4. _____ five pens on the desk.</p>
+
+<input type="radio" name="q4" value="A"> There is<br> <input type="radio" name="q4" value="B"> There are<br>
+
+<hr>
+
+<p>5. Is _____ a computer in the room?</p>
+
+<input type="radio" name="q5" value="A"> there<br> <input type="radio" name="q5" value="B"> their<br>
+
+<hr>
+
+<p>6. _____ many trees in the park.</p>
+
+<input type="radio" name="q6" value="A"> There is<br> <input type="radio" name="q6" value="B"> There are<br>
+
+<hr>
+
+<p>7. There _____ a teacher in the classroom.</p>
+
+<input type="radio" name="q7" value="A"> is<br> <input type="radio" name="q7" value="B"> are<br>
+
+<hr>
+
+<p>8. There _____ two dogs in the yard.</p>
+
+<input type="radio" name="q8" value="A"> is<br> <input type="radio" name="q8" value="B"> are<br>
+
+<hr>
+
+<p>9. _____ there any students?</p>
+
+<input type="radio" name="q9" value="A"> Is<br> <input type="radio" name="q9" value="B"> Are<br>
+
+<hr>
+
+<p>10. There _____ not any milk.</p>
+
+<input type="radio" name="q10" value="A"> is<br> <input type="radio" name="q10" value="B"> are<br>
+
+<br><br>
+
+<button type="button" onclick="checkQuiz()">
+Kiểm Tra Kết Quả
+</button>
+
+</form>
+
+<div id="result" class="result"></div>
+
+</div>
+
+<script>
+
+function checkQuiz(){
+
+let score = 0;
+
+const answers = {
+q1:"A",
+q2:"B",
+q3:"A",
+q4:"B",
+q5:"A",
+q6:"B",
+q7:"A",
+q8:"B",
+q9:"B",
+q10:"A"
+};
+
+for(let key in answers){
+
+let selected =
+document.querySelector(
+`input[name="${key}"]:checked`
+);
+
+if(selected && selected.value === answers[key]){
+score++;
+}
+
+}
+
+document.getElementById("result").innerHTML =
+"🎉 Bạn đúng " + score + "/10 câu";
+
+}
+
+</script>
+
+</body>
+</html>
