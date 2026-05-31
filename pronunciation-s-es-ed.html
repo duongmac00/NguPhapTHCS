@@ -303,6 +303,21 @@ score++;
 
 }
 
+let message="";
+
+if(score>=9){
+message="🌟 Xuất sắc!";
+}
+else if(score>=7){
+message="👍 Khá tốt!";
+}
+else if(score>=5){
+message="📚 Cần luyện thêm!";
+}
+else{
+message="🔥 Hãy ôn lại bài học!";
+}
+
 document.getElementById("result").innerHTML =
 "🎉 Bạn đúng " + score + "/10 câu<br>" + message;
 
